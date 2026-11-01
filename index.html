@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#26394b">
-  <meta name="description" content="کارت ویزیت دیجیتال مصطفی قاضی اسدی، وکیل؛ خدمات حقوقی، ملکی، ثبتی و تنظیم قراردادها.">
-  <title>مصطفی قاضی اسدی |  وکیل پایه یک دادگستری </title>
+  <meta name="description" content="کارت ویزیت دیجیتال مصطفی قاضی اسدی، وکیل پایه یک دادگستری؛ خدمات حقوقی، ملکی، ثبتی و تنظیم قراردادها.">
+  <title>مصطفی قاضی اسدی | وکیل پایه یک دادگستری</title>
 
   <style>
     * {
@@ -46,6 +46,30 @@
       text-align: center;
       padding: 38px 20px 34px;
       position: relative;
+      overflow: hidden;
+    }
+
+    /* نشان حقوقی ظریف در پس‌زمینه */
+    .legal-watermark {
+      position: absolute;
+      width: 245px;
+      height: 245px;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      opacity: 0.075;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .legal-watermark svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: #d9bd82;
+      stroke-width: 1.15;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .header::after {
@@ -56,6 +80,12 @@
       width: 76%;
       height: 2px;
       background: #c5ad7c;
+      z-index: 2;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
     }
 
     .profile {
@@ -86,12 +116,14 @@
     h1 {
       font-size: 24px;
       font-weight: bold;
-      margin-bottom: 5px;
+      margin-bottom: 7px;
     }
 
     .job {
-      color: #d9c9a6;
-      font-size: 16px;
+      color: #e0c997;
+      font-size: 19px;
+      font-weight: bold;
+      margin-top: 3px;
     }
 
     .content {
@@ -213,7 +245,6 @@
       stroke-linejoin: round;
     }
 
-    /* رنگ اختصاصی آیکن شبکه‌های اجتماعی */
     .contact-item.telegram .contact-icon {
       background: #ffffff;
       color: #229ED9;
@@ -297,6 +328,10 @@
       .contact-item span:last-child {
         font-size: 11px;
       }
+
+      .job {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
@@ -307,17 +342,37 @@
     <div class="card">
 
       <header class="header">
-        <div class="profile">MG</div>
-        <div class="eyebrow">PERSONAL LEGAL PROFILE</div>
-        <h1>مصطفی قاضی اسدی</h1>
-        <div class="job">وکیل</div>
+
+        <div class="legal-watermark" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <path d="M100 25v120"/>
+            <path d="M55 55h90"/>
+            <path d="M100 25l-8 10h16z"/>
+            <path d="M55 55L30 100h50L55 55z"/>
+            <path d="M145 55l-25 45h50l-25-45z"/>
+            <path d="M30 100c4 12 46 12 50 0"/>
+            <path d="M120 100c4 12 46 12 50 0"/>
+            <path d="M75 145h50"/>
+            <path d="M65 160h70"/>
+            <path d="M85 145l-5 15M115 145l5 15"/>
+            <circle cx="100" cy="25" r="4"/>
+          </svg>
+        </div>
+
+        <div class="header-content">
+          <div class="profile">MG</div>
+          <div class="eyebrow">PERSONAL LEGAL PROFILE</div>
+          <h1>مصطفی قاضی اسدی</h1>
+          <div class="job">وکیل پایه یک دادگستری</div>
+        </div>
+
       </header>
 
       <div class="content">
 
         <p class="intro">
           ارائه خدمات حقوقی، پیگیری دعاوی و مشاوره در امور حقوقی،
-          ملکی و ثبتی با رویکردی دقیق و حرفه‌ای.
+          ملکی و ثبتی با رویکردی تخصصی.
         </p>
 
         <section>
