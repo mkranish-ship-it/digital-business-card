@@ -2,356 +2,489 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="کارت ویزیت دیجیتال مصطفی قاضی اسدی، وکیل پایه یک دادگستری">
-  <title>مصطفی قاضی اسدی | وکیل پایه یک دادگستری</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="کارت ویزیت دیجیتال مصطفی قاضی اسدی، وکیل پایه یک دادگستری">
+<title>مصطفی قاضی اسدی | وکیل پایه یک دادگستری</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      padding: 35px 15px;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #e9e5dc;
-      font-family: Tahoma, Arial, sans-serif;
-      color: #263246;
-    }
+body {
+  margin: 0;
+  padding: 35px 15px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e9e5dc;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #263246;
+}
 
-    .business-card {
-      width: 100%;
-      max-width: 470px;
-      overflow: hidden;
-      background: #fbf9f3;
-      border: 5px double #c69a43;
-      border-radius: 18px;
-      box-shadow: 0 12px 35px rgba(20, 31, 48, 0.18);
-    }
+.business-card {
+  width: 100%;
+  max-width: 470px;
+  overflow: hidden;
+  background: #fbf9f3;
+  border: 4px double #c69a43;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(20,31,48,0.18);
+}
 
-    .header {
-      position: relative;
-      overflow: hidden;
-      padding: 32px 20px 27px;
-      text-align: center;
-      color: #fff;
-      background: #17263e;
-    }
+/* HEADER */
 
-    .header::before {
-      content: "⚖";
-      position: absolute;
-      top: 5px;
-      right: 15px;
-      font-size: 145px;
-      line-height: 1;
-      color: rgba(255,255,255,0.045);
-      pointer-events: none;
-    }
+.header {
+  position: relative;
+  overflow: hidden;
+  padding: 32px 20px 29px;
+  text-align: center;
+  color: white;
+  background: #17263e;
+  border-bottom: 3px solid #c69a43;
+}
 
-    .header::after {
-      content: "⚖";
-      position: absolute;
-      bottom: -55px;
-      left: 12px;
-      font-size: 145px;
-      color: rgba(198,154,67,0.06);
-      pointer-events: none;
-    }
+.header::before {
+  content: "⚖";
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 145px;
+  line-height: 1;
+  color: rgba(255,255,255,0.055);
+  pointer-events: none;
+}
 
-    .profile-image {
-      position: relative;
-      z-index: 1;
-      width: 140px;
-      height: 140px;
-      display: block;
-      margin: 0 auto 18px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center 30%;
-      border: 5px solid #c69a43;
-      box-shadow: 0 0 0 5px rgba(255,255,255,0.12),
-                  0 5px 18px rgba(0,0,0,0.25);
-    }
+.header::after {
+  content: "MG";
+  position: absolute;
+  bottom: -15px;
+  left: 12px;
+  font-family: Georgia, serif;
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: rgba(198,154,67,0.09);
+  pointer-events: none;
+}
 
-    .english-title {
-      position: relative;
-      z-index: 1;
-      margin-bottom: 12px;
-      color: #d8b76e;
-      font-family: Georgia, serif;
-      font-size: 11px;
-      letter-spacing: 3px;
-      direction: ltr;
-    }
+/* PROFILE IMAGE */
 
-    h1 {
-      position: relative;
-      z-index: 1;
-      margin: 0 0 10px;
-      color: #fff;
-      font-size: 25px;
-      font-weight: bold;
-    }
+.profile-image {
+  position: relative;
+  z-index: 2;
+  width: 140px;
+  height: 140px;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 5px solid #c69a43;
+  box-shadow:
+    0 0 0 5px rgba(255,255,255,0.13),
+    0 5px 20px rgba(0,0,0,0.3);
+}
 
-    .job-title {
-      position: relative;
-      z-index: 1;
-      color: #e2c47f;
-      font-size: 16px;
-    }
+.english-title {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 12px;
+  color: #d8b76e;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  direction: ltr;
+}
 
-    .content {
-      padding: 24px 25px 20px;
-    }
+h1 {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+}
 
-    .intro {
-      margin: 0 0 22px;
-      text-align: center;
-      line-height: 2.1;
-      font-size: 13px;
-      color: #555;
-    }
+.job-title {
+  position: relative;
+  z-index: 2;
+  color: #e2c47f;
+  font-size: 16px;
+}
 
-    .section-title {
-      margin: 20px 0 13px;
-      padding-bottom: 9px;
-      border-bottom: 1px solid #d8c18e;
-      color: #17263e;
-      font-size: 16px;
-      font-weight: bold;
-    }
+/* CONTENT */
 
-    .services {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
+.content {
+  padding: 24px 25px 20px;
+}
 
-    .service {
-      padding: 12px 8px;
-      text-align: center;
-      background: #f1eee5;
-      border: 1px solid #e5dcc8;
-      border-radius: 9px;
-      color: #39465a;
-      font-size: 12px;
-    }
+.intro {
+  margin: 0 0 22px;
+  text-align: center;
+  line-height: 2.1;
+  font-size: 13px;
+  color: #555;
+}
 
-    .contact-list {
-      display: grid;
-      gap: 10px;
-    }
+.section-title {
+  margin: 20px 0 13px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #d8c18e;
+  color: #17263e;
+  font-size: 16px;
+  font-weight: bold;
+}
 
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      padding: 12px 14px;
-      text-decoration: none;
-      color: #fff;
-      border-radius: 9px;
-      font-size: 13px;
-      direction: rtl;
-      transition: transform 0.2s, opacity 0.2s;
-    }
+/* LEGAL SERVICES */
 
-    .contact-link:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
 
-    .contact-icon {
-      width: 27px;
-      text-align: center;
-      font-size: 18px;
-    }
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 13px 7px;
+  text-align: center;
+  background: #f1eee5;
+  border: 1px solid #e5dcc8;
+  border-radius: 10px;
+  color: #263b5b;
+  font-size: 12px;
+  transition: 0.2s;
+}
 
-    .whatsapp {
-      background: #218b59;
-    }
+.service:hover {
+  border-color: #c69a43;
+  background: #f8f3e7;
+}
 
-    .telegram {
-      background: #2589bd;
-    }
+.service-icon {
+  color: #bd9140;
+  font-size: 19px;
+  flex-shrink: 0;
+}
 
-    .instagram {
-      background: #a74479;
-    }
+/* CONTACT */
 
-    .phone {
-      background: #263b5b;
-    }
+.contact-list {
+  display: grid;
+  gap: 10px;
+}
 
-    .email {
-      background: #77705f;
-    }
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 13px;
+  direction: rtl;
+  transition: transform 0.2s, opacity 0.2s;
+}
 
-    .qr-section {
-      margin-top: 25px;
-      padding-top: 18px;
-      text-align: center;
-      border-top: 1px solid #ded3bb;
-    }
+.contact-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
 
-    .qr-section p {
-      margin: 0 0 12px;
-      color: #4c4c4c;
-      font-size: 12px;
-    }
+.contact-icon {
+  width: 29px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
 
-    .qr-code {
-      width: 125px;
-      height: 125px;
-      padding: 6px;
-      background: #fff;
-      border: 1px solid #d4bd86;
-      border-radius: 8px;
-    }
+.contact-icon svg {
+  width: 25px;
+  height: 25px;
+  display: block;
+  fill: currentColor;
+}
 
-    .website {
-      display: block;
-      margin-top: 9px;
-      color: #8c6b2f;
-      font-size: 11px;
-      direction: ltr;
-      text-decoration: none;
-    }
+.whatsapp {
+  background: #218b59;
+}
 
-    .footer {
-      padding: 14px 10px;
-      text-align: center;
-      background: #17263e;
-      color: #d8c18e;
-      font-size: 10px;
-      line-height: 1.8;
-    }
+.telegram {
+  background: #2589bd;
+}
 
-    @media (max-width: 400px) {
-      body {
-        padding: 15px 9px;
-      }
+.instagram {
+  background: #a74479;
+}
 
-      .content {
-        padding: 20px 16px;
-      }
+.phone {
+  background: #263b5b;
+}
 
-      h1 {
-        font-size: 22px;
-      }
+.email {
+  background: #77705f;
+}
 
-      .profile-image {
-        width: 120px;
-        height: 120px;
-      }
-    }
-  </style>
+/* QR CODE */
+
+.qr-section {
+  margin-top: 25px;
+  padding-top: 18px;
+  text-align: center;
+  border-top: 1px solid #ded3bb;
+}
+
+.qr-section p {
+  margin: 0 0 12px;
+  color: #4c4c4c;
+  font-size: 12px;
+}
+
+.qr-code {
+  width: 125px;
+  height: 125px;
+  padding: 6px;
+  background: white;
+  border: 2px solid #c69a43;
+  border-radius: 9px;
+}
+
+.website {
+  display: block;
+  margin-top: 9px;
+  color: #8c6b2f;
+  font-size: 11px;
+  direction: ltr;
+  text-decoration: none;
+}
+
+.visit-button {
+  display: inline-block;
+  margin-top: 13px;
+  padding: 10px 22px;
+  color: white;
+  background: #17263e;
+  border: 1px solid #c69a43;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.visit-button:hover {
+  background: #263b5b;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 15px 10px;
+  text-align: center;
+  background: #17263e;
+  color: #d8c18e;
+  border-top: 3px solid #c69a43;
+  font-size: 10px;
+  line-height: 1.9;
+}
+
+/* MOBILE */
+
+@media (max-width: 400px) {
+  body {
+    padding: 15px 9px;
+  }
+
+  .content {
+    padding: 20px 16px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <main class="business-card">
+<main class="business-card">
 
-    <header class="header">
+  <header class="header">
+
+    <img
+      src="profile.JPG"
+      alt="تصویر مصطفی قاضی اسدی"
+      class="profile-image"
+    >
+
+    <div class="english-title">PERSONAL LEGAL PROFILE</div>
+
+    <h1>مصطفی قاضی اسدی</h1>
+
+    <div class="job-title">وکیل پایه یک دادگستری</div>
+
+  </header>
+
+  <section class="content">
+
+    <p class="intro">
+      ارائه خدمات حقوقی، پیگیری دعاوی و مشاوره در امور حقوقی،
+      ملکی و ثبتی با رویکردی تخصصی.
+    </p>
+
+    <h2 class="section-title">خدمات حقوقی</h2>
+
+    <div class="services">
+
+      <div class="service">
+        <span class="service-icon">⚖</span>
+        دعاوی حقوقی
+      </div>
+
+      <div class="service">
+        <span class="service-icon">🏛</span>
+        دعاوی ملکی
+      </div>
+
+      <div class="service">
+        <span class="service-icon">📑</span>
+        دعاوی ثبتی
+      </div>
+
+      <div class="service">
+        <span class="service-icon">✍</span>
+        تنظیم و بررسی قراردادها
+      </div>
+
+    </div>
+
+    <h2 class="section-title">راه‌های ارتباطی</h2>
+
+    <div class="contact-list">
+
+      <!-- WHATSAPP -->
+
+      <a class="contact-link whatsapp"
+         href="https://wa.me/989125222883"
+         target="_blank" rel="noopener">
+
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L0 24l6.4-1.7a11.8 11.8 0 0 0 5.7 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.4zM12.1 21.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.3-.5a9.8 9.8 0 0 1-1.5-5.1 10 10 0 1 1 10 9.9zm5.5-7.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.2-.2.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.5s1.1 2.8 1.3 3c.2.2 2.1 3.2 5.1 4.5 2.4 1 3.3 1 4.5.8.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.3z"/>
+          </svg>
+        </span>
+
+        <span>واتساپ | 09125222883</span>
+      </a>
+
+      <!-- TELEGRAM -->
+
+      <a class="contact-link telegram"
+         href="https://t.me/mg_lawyer"
+         target="_blank" rel="noopener">
+
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M23.5 2.4 19.9 21c-.3 1.3-1.1 1.6-2.2.9l-6.1-4.5-2.9 2.8c-.3.3-.6.6-1.2.6l.4-6.2L19.2 4.5c.5-.4-.1-.7-.7-.3L5.1 12.9l-6-1.9c-1.3-.4-1.3-1.3.3-1.9L22.1.2c1.1-.4 2 .3 1.4 2.2z" transform="translate(1 1) scale(.96)"/>
+          </svg>
+        </span>
+
+        <span>تلگرام | ارتباط مستقیم</span>
+      </a>
+
+      <!-- INSTAGRAM -->
+
+      <a class="contact-link instagram"
+         href="https://instagram.com/mo.lawyer"
+         target="_blank" rel="noopener">
+
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2.2a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.7-3.3a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/>
+          </svg>
+        </span>
+
+        <span>اینستاگرام | mo.lawyer</span>
+      </a>
+
+      <!-- PHONE -->
+
+      <a class="contact-link phone"
+         href="tel:09125222883">
+
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.6.6 3.9.6.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C9.2 21.4 2.6 14.8 2.6 3.5c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.7.6 3.9.1.4 0 .9-.3 1.2z"/>
+          </svg>
+        </span>
+
+        <span>تماس تلفنی | 09125222883</span>
+      </a>
+
+      <!-- EMAIL -->
+
+      <a class="contact-link email"
+         href="mailto:mg.asadi@yahoo.com">
+
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </span>
+
+        <span>ایمیل | mg.asadi@yahoo.com</span>
+      </a>
+
+    </div>
+
+    <!-- QR CODE -->
+
+    <div class="qr-section">
+
+      <p>برای مشاهده کارت ویزیت دیجیتال، اسکن کنید</p>
 
       <img
-        src="profile.JPG"
-        alt="تصویر مصطفی قاضی اسدی"
-        class="profile-image"
+        class="qr-code"
+        src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https%3A%2F%2Fmostafa-lawyer.onrender.com%2F"
+        alt="QR Code کارت ویزیت دیجیتال"
       >
 
-      <div class="english-title">PERSONAL LEGAL PROFILE</div>
+      <a class="website"
+         href="https://mostafa-lawyer.onrender.com/"
+         target="_blank" rel="noopener">
+        mostafa-lawyer.onrender.com
+      </a>
 
-      <h1>مصطفی قاضی اسدی</h1>
+      <a class="visit-button"
+         href="https://mostafa-lawyer.onrender.com/"
+         target="_blank" rel="noopener">
+        مشاهده کارت ویزیت دیجیتال
+      </a>
 
-      <div class="job-title">وکیل پایه یک دادگستری</div>
+    </div>
 
-    </header>
+  </section>
 
-    <section class="content">
+  <footer class="footer">
+    © 2026 | مصطفی قاضی اسدی
+    <br>
+    کلیه حقوق محفوظ است.
+  </footer>
 
-      <p class="intro">
-        ارائه خدمات حقوقی، پیگیری دعاوی و مشاوره در امور حقوقی،
-        ملکی و ثبتی با رویکردی تخصصی.
-      </p>
-
-      <h2 class="section-title">خدمات حقوقی</h2>
-
-      <div class="services">
-        <div class="service">⚖ دعاوی حقوقی</div>
-        <div class="service">🏛 دعاوی ملکی</div>
-        <div class="service">📑 دعاوی ثبتی</div>
-        <div class="service">✍ تنظیم و بررسی قراردادها</div>
-      </div>
-
-      <h2 class="section-title">راه‌های ارتباطی</h2>
-
-      <div class="contact-list">
-
-        <a class="contact-link whatsapp"
-           href="https://wa.me/989125222883"
-           target="_blank" rel="noopener">
-          <span class="contact-icon">◉</span>
-          <span>واتساپ | 09125222883</span>
-        </a>
-
-        <a class="contact-link telegram"
-           href="https://t.me/mg_lawyer"
-           target="_blank" rel="noopener">
-          <span class="contact-icon">➤</span>
-          <span>تلگرام | ارتباط مستقیم</span>
-        </a>
-
-        <a class="contact-link instagram"
-           href="https://instagram.com/mo.lawyer"
-           target="_blank" rel="noopener">
-          <span class="contact-icon">◎</span>
-          <span>اینستاگرام | mo.lawyer</span>
-        </a>
-
-        <a class="contact-link phone" href="tel:09125222883">
-          <span class="contact-icon">☎</span>
-          <span>تماس تلفنی | 09125222883</span>
-        </a>
-
-        <a class="contact-link email"
-           href="mailto:mg.asadi@yahoo.com">
-          <span class="contact-icon">✉</span>
-          <span>ایمیل | mg.asadi@yahoo.com</span>
-        </a>
-
-      </div>
-
-      <div class="qr-section">
-        <p>برای مشاهده کارت ویزیت دیجیتال، اسکن کنید</p>
-
-        <img
-          class="qr-code"
-          src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https%3A%2F%2Fmostafa-lawyer.onrender.com%2F"
-          alt="QR Code کارت ویزیت دیجیتال"
-        >
-
-        <a class="website"
-           href="https://mostafa-lawyer.onrender.com/"
-           target="_blank" rel="noopener">
-          mostafa-lawyer.onrender.com
-        </a>
-      </div>
-
-    </section>
-
-    <footer class="footer">
-      © 2026 | مصطفی قاضی اسدی
-      <br>
-      کلیه حقوق محفوظ است.
-    </footer>
-
-  </main>
+</main>
 
 </body>
 </html>
