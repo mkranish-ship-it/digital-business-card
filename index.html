@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#26394b">
-  <meta name="description" content="کارت ویزیت دیجیتال مصطفی قاضی اسدی، وکیل؛ ارائه خدمات حقوقی، ملکی، ثبتی و تنظیم قراردادها.">
+  <meta name="description" content="کارت ویزیت دیجیتال مصطفی قاضی اسدی، وکیل؛ خدمات حقوقی، ملکی، ثبتی و تنظیم قراردادها.">
   <title>مصطفی قاضی اسدی | وکیل</title>
 
   <style>
@@ -213,9 +213,34 @@
       stroke-linejoin: round;
     }
 
-    .contact-icon .brand {
+    /* رنگ اختصاصی آیکن شبکه‌های اجتماعی */
+    .contact-item.telegram .contact-icon {
+      background: #ffffff;
+      color: #229ED9;
+      border: 1px solid #e5edf2;
+    }
+
+    .contact-item.whatsapp .contact-icon {
+      background: #ffffff;
+      color: #25D366;
+      border: 1px solid #e5eee8;
+    }
+
+    .contact-item.instagram .contact-icon {
+      background: #ffffff;
+      color: #E4405F;
+      border: 1px solid #f1e4e8;
+    }
+
+    .contact-item.telegram svg,
+    .contact-item.whatsapp svg {
       fill: currentColor;
       stroke: none;
+    }
+
+    .contact-item.instagram svg {
+      stroke: currentColor;
+      fill: none;
     }
 
     .contact-item span:last-child {
@@ -353,7 +378,7 @@
               <span>تماس تلفنی</span>
             </a>
 
-            <a class="contact-item" href="https://wa.me/989125222883" target="_blank" rel="noopener">
+            <a class="contact-item whatsapp" href="https://wa.me/989125222883" target="_blank" rel="noopener">
               <span class="contact-icon">
                 <svg viewBox="0 0 24 24">
                   <path d="M20 11.5a8.4 8.4 0 0 1-12.5 7.3L3 20l1.2-4.3A8.5 8.5 0 1 1 20 11.5z"/>
@@ -363,16 +388,16 @@
               <span>واتساپ</span>
             </a>
 
-            <a class="contact-item" href="https://t.me/mg_lawyer" target="_blank" rel="noopener">
-              <span class=<a class="contact-item telegram" href="https://t.me/mg_lawyer" target="_blank" rel="noopener">
+            <a class="contact-item telegram" href="https://t.me/mg_lawyer" target="_blank" rel="noopener">
+              <span class="contact-icon">
                 <svg viewBox="0 0 24 24">
-                  <path class="brand" d="M21.5 3.2 18.3 20c-.2 1.2-.9 1.5-1.8.9l-5-3.7-2.4 2.3c-.3.3-.6.6-1.1.6l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L5.6 13.7.7 12.2c-1.1-.4-1.1-1.1.2-1.6L20 3.1c.9-.3 1.7.2 1.5 1z"/>
+                  <path d="M21.5 3.2 18.3 20c-.2 1.2-.9 1.5-1.8.9l-5-3.7-2.4 2.3c-.3.3-.6.6-1.1.6l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L5.6 13.7.7 12.2c-1.1-.4-1.1-1.1.2-1.6L20 3.1c.9-.3 1.7.2 1.5 1z"/>
                 </svg>
               </span>
               <span>تلگرام</span>
             </a>
 
-            <a class="contact-item" href="https://instagram.com/mo.lawyer" target="_blank" rel="noopener">
+            <a class="contact-item instagram" href="https://instagram.com/mo.lawyer" target="_blank" rel="noopener">
               <span class="contact-icon">
                 <svg viewBox="0 0 24 24">
                   <rect x="3" y="3" width="18" height="18" rx="5"/>
