@@ -4,410 +4,249 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="کارت ویزیت دیجیتال مصطفی قاضی اسدی، وکیل پایه یک دادگستری">
   <title>مصطفی قاضی اسدی | وکیل پایه یک دادگستری</title>
 
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
+      margin: 0;
+      padding: 35px 15px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #e9e5dc;
       font-family: Tahoma, Arial, sans-serif;
-      background: #eee9df;
-      color: #172b40;
-      padding: 25px 12px;
-      line-height: 1.9;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
+      color: #263246;
     }
 
     .business-card {
       width: 100%;
-      max-width: 650px;
-      margin: auto;
-      background: #fffaf0;
-      border: 5px double #c69a43;
-      border-radius: 38px;
+      max-width: 470px;
       overflow: hidden;
-      box-shadow: 0 12px 35px rgba(27, 38, 48, 0.18);
-      position: relative;
+      background: #fbf9f3;
+      border: 5px double #c69a43;
+      border-radius: 18px;
+      box-shadow: 0 12px 35px rgba(20, 31, 48, 0.18);
     }
 
-    /* سربرگ سرمه‌ای */
     .header {
       position: relative;
       overflow: hidden;
+      padding: 32px 20px 27px;
       text-align: center;
-      color: white;
-      padding: 35px 20px 42px;
-      background: linear-gradient(140deg, #102b46, #071b30);
-      border-bottom: 7px solid #c99b43;
-      border-radius: 0 0 48% 48% / 0 0 12% 12%;
+      color: #fff;
+      background: #17263e;
     }
 
     .header::before {
-      content: "";
+      content: "⚖";
       position: absolute;
-      inset: 9px;
-      border: 1px solid rgba(220, 180, 103, 0.45);
-      border-radius: 28px 28px 45% 45%;
+      top: 5px;
+      right: 15px;
+      font-size: 145px;
+      line-height: 1;
+      color: rgba(255,255,255,0.045);
       pointer-events: none;
     }
 
-    .legal-watermark {
+    .header::after {
+      content: "⚖";
       position: absolute;
-      width: 280px;
-      height: 280px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0.16;
+      bottom: -55px;
+      left: 12px;
+      font-size: 145px;
+      color: rgba(198,154,67,0.06);
       pointer-events: none;
-      z-index: 0;
     }
 
-    .legal-watermark svg {
-      width: 100%;
-      height: 100%;
-      fill: none;
-      stroke: #d9bd82;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .header-content {
+    .profile-image {
       position: relative;
       z-index: 1;
-    }
-
-    .monogram {
-      width: 94px;
-      height: 94px;
-      margin: 0 auto 10px;
+      width: 108px;
+      height: 108px;
+      display: block;
+      margin: 0 auto 15px;
       border-radius: 50%;
-      background: #fffaf0;
-      color: #102b46;
-      border: 4px double #d5a84e;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Georgia, serif;
-      font-size: 39px;
-      font-weight: bold;
-      direction: ltr;
+      object-fit: cover;
+      object-position: center 30%;
+      border: 4px solid #c69a43;
+      box-shadow: 0 0 0 4px rgba(255,255,255,0.12);
     }
 
     .english-title {
-      color: #e4bd70;
-      font-size: 13px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 12px;
+      color: #d8b76e;
+      font-family: Georgia, serif;
+      font-size: 11px;
       letter-spacing: 3px;
-      font-weight: bold;
-      margin-bottom: 8px;
       direction: ltr;
     }
 
-    .lawyer-name {
-      font-size: 34px;
-      font-weight: bold;
-      margin: 8px 0;
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 10px;
       color: #fff;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    }
-
-    .lawyer-title {
-      color: #e8b955;
-      font-size: 23px;
+      font-size: 25px;
       font-weight: bold;
-      margin-top: 5px;
     }
 
-    /* محتوای اصلی */
+    .job-title {
+      position: relative;
+      z-index: 1;
+      color: #e2c47f;
+      font-size: 16px;
+    }
+
     .content {
-      padding: 25px 28px 20px;
-      text-align: center;
+      padding: 24px 25px 20px;
     }
 
     .intro {
-      font-size: 18px;
+      margin: 0 0 22px;
+      text-align: center;
       line-height: 2.1;
-      font-weight: bold;
-      color: #172b40;
-      margin: 0 auto 20px;
-      max-width: 540px;
+      font-size: 13px;
+      color: #555;
     }
 
     .section-title {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 23px 0 15px;
-      color: #f8e8c3;
-    }
-
-    .section-title::before,
-    .section-title::after {
-      content: "";
-      flex: 1;
-      height: 2px;
-      background: linear-gradient(to left, #b78027, #e8c77d);
-    }
-
-    .section-title span {
-      background: linear-gradient(135deg, #183650, #071b30);
-      border: 3px double #d5a84e;
-      border-radius: 28px;
-      padding: 2px 24px;
-      color: #fff0cf;
-      font-size: 19px;
+      margin: 20px 0 13px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid #d8c18e;
+      color: #17263e;
+      font-size: 16px;
       font-weight: bold;
-      white-space: nowrap;
-      box-shadow: 0 3px 7px rgba(0,0,0,0.12);
     }
 
-    /* خدمات حقوقی */
     .services {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 13px;
+      gap: 10px;
     }
 
     .service {
-      min-height: 96px;
-      padding: 12px;
-      border: 1px solid #edcc8a;
-      border-radius: 24px;
-      background: linear-gradient(135deg, #fffaf0, #f8e9cf);
-      box-shadow: 0 3px 6px rgba(130, 94, 35, 0.10);
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      gap: 8px;
-      font-size: 17px;
-      font-weight: bold;
-      color: #102b46;
+      padding: 12px 8px;
+      text-align: center;
+      background: #f1eee5;
+      border: 1px solid #e5dcc8;
+      border-radius: 9px;
+      color: #39465a;
+      font-size: 12px;
     }
 
-    .service-icon {
-      flex: 0 0 65px;
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, #193b58, #071b30);
-      border: 2px solid #d4a64e;
-      color: #f2cc75;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 29px;
-    }
-
-    /* راه‌های ارتباطی */
-    .contacts {
+    .contact-list {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 8px;
+      gap: 10px;
     }
 
-    .contact {
-      min-width: 0;
-      padding: 10px 3px;
-      border: 1px solid #edcc8a;
-      border-radius: 21px;
-      background: linear-gradient(145deg, #fffaf0, #f8ebd4);
+    .contact-link {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 5px;
+      gap: 11px;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 9px;
       font-size: 13px;
-      font-weight: bold;
-      transition: 0.2s;
+      direction: rtl;
+      transition: transform 0.2s, opacity 0.2s;
     }
 
-    .contact:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+    .contact-link:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
     }
 
     .contact-icon {
-      width: 53px;
-      height: 53px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 25px;
-      font-weight: bold;
-      direction: ltr;
-    }
-
-    .phone-icon, .email-icon {
-      background: linear-gradient(145deg, #193b58, #071b30);
-      color: #f4cf7d;
-    }
-
-    .whatsapp-icon { background: #25D366; }
-    .telegram-icon { background: #229ED9; }
-    .instagram-icon {
-      background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-    }
-
-    /* QR Code */
-    .qr-section {
-      padding: 5px 0 20px;
-    }
-
-    .qr-description {
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .qr-frame {
-      display: inline-block;
-      padding: 7px;
-      background: white;
-      border: 3px solid #bd8b34;
-      border-radius: 17px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
-    }
-
-    .qr-frame img {
-      width: 135px;
-      height: 135px;
-      display: block;
-    }
-
-    .website-button {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 7px 23px;
-      border-radius: 25px;
-      color: #102b46;
-      font-weight: bold;
-      background: linear-gradient(135deg, #f8df9d, #e6b64e);
-      border: 1px solid #d4a044;
-      box-shadow: 0 3px 7px rgba(0,0,0,0.10);
-    }
-
-    /* فوتر */
-    .footer {
-      background: linear-gradient(135deg, #102b46, #071b30);
-      color: #f5d58e;
+      width: 27px;
       text-align: center;
-      padding: 19px 12px;
-      border-top: 5px solid #c99b43;
-      position: relative;
+      font-size: 18px;
     }
 
-    .footer::before {
-      content: "";
+    .whatsapp {
+      background: #218b59;
+    }
+
+    .telegram {
+      background: #2589bd;
+    }
+
+    .instagram {
+      background: #a74479;
+    }
+
+    .phone {
+      background: #263b5b;
+    }
+
+    .email {
+      background: #77705f;
+    }
+
+    .qr-section {
+      margin-top: 25px;
+      padding-top: 18px;
+      text-align: center;
+      border-top: 1px solid #ded3bb;
+    }
+
+    .qr-section p {
+      margin: 0 0 12px;
+      color: #4c4c4c;
+      font-size: 12px;
+    }
+
+    .qr-code {
+      width: 125px;
+      height: 125px;
+      padding: 6px;
+      background: #fff;
+      border: 1px solid #d4bd86;
+      border-radius: 8px;
+    }
+
+    .website {
       display: block;
-      width: 75%;
-      height: 1px;
-      background: linear-gradient(to right, transparent, #d6aa55, transparent);
-      margin: 0 auto 9px;
+      margin-top: 9px;
+      color: #8c6b2f;
+      font-size: 11px;
+      direction: ltr;
+      text-decoration: none;
     }
 
-    .footer-main {
-      font-size: 16px;
-      font-weight: bold;
+    .footer {
+      padding: 14px 10px;
+      text-align: center;
+      background: #17263e;
+      color: #d8c18e;
+      font-size: 10px;
+      line-height: 1.8;
     }
 
-    .footer-small {
-      font-size: 13px;
-      margin-top: 3px;
-    }
-
-    /* نمایش در موبایل */
-    @media (max-width: 480px) {
+    @media (max-width: 400px) {
       body {
-        padding: 12px 7px;
-      }
-
-      .business-card {
-        border-radius: 27px;
-        border-width: 4px;
-      }
-
-      .header {
-        padding: 27px 12px 34px;
-      }
-
-      .monogram {
-        width: 78px;
-        height: 78px;
-        font-size: 33px;
-      }
-
-      .lawyer-name {
-        font-size: 27px;
-      }
-
-      .lawyer-title {
-        font-size: 19px;
+        padding: 15px 9px;
       }
 
       .content {
-        padding: 19px 13px;
+        padding: 20px 16px;
       }
 
-      .intro {
-        font-size: 15px;
-      }
-
-      .section-title span {
-        font-size: 16px;
-        padding: 2px 16px;
-      }
-
-      .service {
-        min-height: 82px;
-        font-size: 13px;
-        padding: 8px 4px;
-      }
-
-      .service-icon {
-        width: 48px;
-        height: 48px;
-        flex-basis: 48px;
+      h1 {
         font-size: 22px;
       }
 
-      .contacts {
-        gap: 5px;
-      }
-
-      .contact {
-        font-size: 10px;
-        padding: 8px 2px;
-        border-radius: 15px;
-      }
-
-      .contact-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-      }
-
-      .qr-description {
-        font-size: 14px;
-      }
-
-      .footer-main {
-        font-size: 14px;
-      }
-
-      .footer-small {
-        font-size: 11px;
+      .profile-image {
+        width: 94px;
+        height: 94px;
       }
     }
   </style>
@@ -417,151 +256,98 @@
 
   <main class="business-card">
 
-    <!-- سربرگ -->
     <header class="header">
 
-      <div class="legal-watermark" aria-hidden="true">
-        <svg viewBox="0 0 200 200">
-          <path d="M100 25 V145"/>
-          <path d="M55 55 H145"/>
-          <path d="M100 25 L92 36 H108 Z"/>
-          <circle cx="100" cy="22" r="5"/>
-          <path d="M55 55 L32 100 H78 Z"/>
-          <path d="M145 55 L122 100 H168 Z"/>
-          <path d="M32 100 Q55 115 78 100"/>
-          <path d="M122 100 Q145 115 168 100"/>
-          <path d="M55 55 V48 M145 55 V48"/>
-          <path d="M100 145 H75 M100 145 H125"/>
-          <path d="M65 160 H135"/>
-          <path d="M80 145 L75 160 M120 145 L125 160"/>
-        </svg>
-      </div>
+      <img
+        src="profile.jpg"
+        alt="تصویر مصطفی قاضی اسدی"
+        class="profile-image"
+      >
 
-      <div class="header-content">
+      <div class="english-title">PERSONAL LEGAL PROFILE</div>
 
-        <div class="monogram">MG</div>
+      <h1>مصطفی قاضی اسدی</h1>
 
-        <div class="english-title">PERSONAL LEGAL PROFILE</div>
+      <div class="job-title">وکیل پایه یک دادگستری</div>
 
-        <h1 class="lawyer-name">مصطفی قاضی اسدی</h1>
-
-        <div class="lawyer-title">وکیل پایه یک دادگستری</div>
-
-      </div>
     </header>
 
-    <!-- محتوای کارت -->
     <section class="content">
 
       <p class="intro">
-        ارائه خدمات حقوقی، پیگیری دعاوی و مشاوره
-        در امور حقوقی، ملکی و ثبتی با رویکردی تخصصی.
+        ارائه خدمات حقوقی، پیگیری دعاوی و مشاوره در امور حقوقی،
+        ملکی و ثبتی با رویکردی تخصصی.
       </p>
 
-      <!-- خدمات -->
-      <div class="section-title">
-        <span>خدمات حقوقی</span>
-      </div>
+      <h2 class="section-title">خدمات حقوقی</h2>
 
       <div class="services">
-
-        <div class="service">
-          <div class="service-icon">⚖</div>
-          <span>دعاوی حقوقی</span>
-        </div>
-
-        <div class="service">
-          <div class="service-icon">⌂</div>
-          <span>دعاوی ملکی</span>
-        </div>
-
-        <div class="service">
-          <div class="service-icon">▤</div>
-          <span>دعاوی ثبتی</span>
-        </div>
-
-        <div class="service">
-          <div class="service-icon">✎</div>
-          <span>تنظیم و بررسی قراردادها</span>
-        </div>
-
+        <div class="service">⚖ دعاوی حقوقی</div>
+        <div class="service">🏛 دعاوی ملکی</div>
+        <div class="service">📑 دعاوی ثبتی</div>
+        <div class="service">✍ تنظیم و بررسی قراردادها</div>
       </div>
 
-      <!-- تماس -->
-      <div class="section-title">
-        <span>راه‌های ارتباطی</span>
-      </div>
+      <h2 class="section-title">راه‌های ارتباطی</h2>
 
-      <div class="contacts">
+      <div class="contact-list">
 
-        <a class="contact" href="tel:09125222883">
-          <div class="contact-icon phone-icon">☎</div>
-          <span>تماس تلفنی</span>
+        <a class="contact-link whatsapp"
+           href="https://wa.me/989125222883"
+           target="_blank" rel="noopener">
+          <span class="contact-icon">◉</span>
+          <span>واتساپ | 09125222883</span>
         </a>
 
-        <a class="contact" href="https://wa.me/989125222883" target="_blank">
-          <div class="contact-icon whatsapp-icon">◉</div>
-          <span>واتساپ</span>
+        <a class="contact-link telegram"
+           href="https://t.me/mg_lawyer"
+           target="_blank" rel="noopener">
+          <span class="contact-icon">➤</span>
+          <span>تلگرام | ارتباط مستقیم</span>
         </a>
 
-        <a class="contact" href="https://t.me/mg_lawyer" target="_blank">
-          <div class="contact-icon telegram-icon">➤</div>
-          <span>تلگرام</span>
+        <a class="contact-link instagram"
+           href="https://instagram.com/mo.lawyer"
+           target="_blank" rel="noopener">
+          <span class="contact-icon">◎</span>
+          <span>اینستاگرام | mo.lawyer</span>
         </a>
 
-        <a class="contact" href="https://instagram.com/mo.lawyer" target="_blank">
-          <div class="contact-icon instagram-icon">◎</div>
-          <span>اینستاگرام</span>
+        <a class="contact-link phone" href="tel:09125222883">
+          <span class="contact-icon">☎</span>
+          <span>تماس تلفنی | 09125222883</span>
         </a>
 
-        <a class="contact" href="mailto:mg.asadi@yahoo.com">
-          <div class="contact-icon email-icon">✉</div>
-          <span>ایمیل</span>
+        <a class="contact-link email"
+           href="mailto:mg.asadi@yahoo.com">
+          <span class="contact-icon">✉</span>
+          <span>ایمیل | mg.asadi@yahoo.com</span>
         </a>
 
-      </div>
-
-      <!-- QR Code -->
-      <div class="section-title">
-        <span>کارت ویزیت دیجیتال</span>
       </div>
 
       <div class="qr-section">
+        <p>برای مشاهده کارت ویزیت دیجیتال، اسکن کنید</p>
 
-        <p class="qr-description">
-          برای مشاهده کارت ویزیت، کد زیر را اسکن کنید.
-        </p>
+        <img
+          class="qr-code"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https%3A%2F%2Fmostafa-lawyer.onrender.com%2F"
+          alt="QR Code کارت ویزیت دیجیتال"
+        >
 
-        <div class="qr-frame">
-          <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fmostafa-lawyer.onrender.com%2F"
-            alt="QR Code کارت ویزیت دیجیتال">
-        </div>
-
-        <br>
-
-        <a
-          class="website-button"
-          href="https://mostafa-lawyer.onrender.com/"
-          target="_blank">
-          🌐 مشاهده کارت ویزیت
+        <a class="website"
+           href="https://mostafa-lawyer.onrender.com/"
+           target="_blank" rel="noopener">
+          mostafa-lawyer.onrender.com
         </a>
-
       </div>
 
     </section>
 
-    <!-- فوتر -->
     <footer class="footer">
-
-      <div class="footer-main">
-        © 2026 | مصطفی قاضی اسدی
-      </div>
-
-      <div class="footer-small">
-        کلیه حقوق محفوظ است.
-      </div>
-
+      © 2026 | مصطفی قاضی اسدی
+      <br>
+      کلیه حقوق محفوظ است.
     </footer>
 
   </main>
